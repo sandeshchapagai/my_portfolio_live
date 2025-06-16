@@ -1,7 +1,7 @@
-name: Manual Build Next.js Site
+name: Manual Build and Export Next.js Site
 
 on:
-  workflow_dispatch:  # Allows manual trigger from the GitHub Actions UI
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,4 +21,7 @@ jobs:
         run: npm ci
 
       - name: Build Next.js site
-        run: npm run build  # runs `next build` which generates production build in `.next` folder
+        run: npm run build
+
+      - name: Export Next.js site
+        run: npm run export
