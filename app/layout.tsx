@@ -131,7 +131,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ModalProvider />
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId={GA_ID} />
+      <GoogleAnalytics gaId={""} />
     </html>
   );
 }
