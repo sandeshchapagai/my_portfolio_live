@@ -32,7 +32,7 @@ export const Experiences: ExperienceInterface[] = [
     id: "built-design",
     companyName: "Builtdesign",
     type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
+    category: ["Web Dev", "Flutter Developer", "UI/UX"],
     shortDescription:
       "Developed and optimized a high-performing website catering to over 4000 users, emphasizing efficiency and maintainability.",
     websiteLink: "https://builtdesign.in",
@@ -104,7 +104,7 @@ export const Experiences: ExperienceInterface[] = [
     id: "the-super-quotes",
     companyName: "The Super Quotes",
     type: "Professional",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
+    category: ["Mobile Dev", "Flutter Developer", "UI/UX"],
     shortDescription:
       "Elevated The Super Quotes app with JavaScript, React Native, APIs, Redux magic, and Google Play Store debut.",
     websiteLink:
@@ -170,7 +170,7 @@ export const Experiences: ExperienceInterface[] = [
     id: "apex-shopping",
     companyName: "Apex Shopping App",
     type: "Personal Project",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
+    category: ["Mobile Dev", "Flutter Developer", "UI/UX"],
     shortDescription:
       "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
     githubLink: "https://github.com/sandeshchapagai",
@@ -234,7 +234,7 @@ export const Experiences: ExperienceInterface[] = [
     id: "builtdesign-blogs",
     companyName: "Builtdesign Blogs",
     type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
+    category: ["Web Dev", "Flutter Developer", "UI/UX"],
     shortDescription:
       "Crafted Builtdesign's vibrant Blogs Website using Netlify CMS and React for engaging content experiences.",
     websiteLink: "https://blog.builtdesign.in",
