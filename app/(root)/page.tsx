@@ -98,8 +98,7 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Open-source Next.js portfolio template. Fork this on GitHub to
-              create your own developer portfolio.
+              A passionate Flutter developer with hands‑on experience building innovative and user‑centric mobile applications.
             </p>
           </div>
 

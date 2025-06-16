@@ -24,6 +24,7 @@ export const siteConfig = {
     "Portfolio website template",
     "Next.js template",
     "Modern portfolio website",
+
     "Frontend developer portfolio",
     "Full stack developer portfolio",
     "Open source portfolio template",
