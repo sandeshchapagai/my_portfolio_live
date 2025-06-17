@@ -11,11 +11,7 @@ import { buttonVariants } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import { careerExperiences } from "@/config/career";
 import { cn } from "@/lib/utils";
-export async function generateStaticParams() {
-  return careerExperiences.map((career) => ({
-    careerId: career.id,
-  }));
-}
+
 interface CareerDetailPageProps {
   params: {
     careerId: string;

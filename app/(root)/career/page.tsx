@@ -5,7 +5,11 @@ import PageContainer from "@/components/common/page-container";
 import { careerExperiences } from "@/config/career";
 import { pagesConfig } from "@/config/pages";
 import { siteConfig } from "@/config/site";
-
+export async function generateStaticParams() {
+  return careerExperiences.map((career) => ({
+    careerId: career.id,
+  }));
+}
 export const metadata: Metadata = {
   title: `${pagesConfig.career.metadata.title} | Interactive Developer Timeline`,
   description: `${pagesConfig.career.metadata.description} This interactive career timeline showcases professional experience in a visually appealing way. Part of our open-source Next.js portfolio template.`,
