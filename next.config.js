@@ -1,5 +1,7 @@
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
+//   output: 'export',
+//
 //   async headers() {
 //     return [
 //       {
@@ -26,17 +28,29 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Enable static exports for GitHub Pages
-  trailingSlash: true,  // Add trailing slashes to URLs
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true  // Disable image optimization for static export
+    unoptimized: true
   },
-  // If your repo is username.github.io/repo-name, uncomment these:
-  // basePath: '/minimal-next-portfolio-master',
-  // assetPrefix: '/minimal-next-portfolio-master/',
+  // If your GitHub repo is username.github.io/repo-name, uncomment and update:
+  // basePath: '/my_portfolio_live',
+  // assetPrefix: '/my_portfolio_live/',
 
-  // Note: API routes and server-side features won't work with static export
-  // You'll need to handle contact form differently (external service, etc.)
+  // Static export configuration
+  exportPathMap: async function (defaultPathMap) {
+    return {
+      '/': { page: '/' },
+      '/skills': { page: '/skills' },
+      '/experience': { page: '/experience' },
+      '/career': { page: '/career' },
+      '/contact': { page: '/contact' },
+      '/contributions': { page: '/contributions' },
+      '/resume': { page: '/resume' },
+      // Remove dynamic routes that need generateStaticParams
+      // Add specific static paths if needed
+    }
+  }
 }
 
 module.exports = nextConfig

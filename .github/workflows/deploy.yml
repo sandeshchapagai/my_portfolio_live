@@ -2,16 +2,22 @@ name: Manual Build and Deploy Next.js Site
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ main ]  # Also trigger on push to main branch
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,15 +31,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build and Export Next.js Site
-        run: |
-          npm run build
-          npm run export
+      - name: Build Next.js Site
+        run: npm run build
+        env:
+          # Add any environment variables your build needs
+          NODE_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out  # This will work if you have static export configured
 
   deploy:
     needs: build-and-deploy
@@ -41,10 +48,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
